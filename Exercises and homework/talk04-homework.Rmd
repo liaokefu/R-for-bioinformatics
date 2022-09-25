@@ -87,6 +87,10 @@ Sys.getenv("HOME")
 
 ```{r}
 ## 代码写这里，并运行；
+x <- c("single", "married", "married", "single")
+levels(x)=c("singel","married")
+levels(x) <- c(levels(x), "widowed")
+x[3] <- "widowed"
 
 ```
 
@@ -102,6 +106,12 @@ Sys.getenv("HOME")
 
 ```{r}
 ## 代码写这里，并运行；
+v = c("a", "b", "a", "c", "b")
+v=factor(v)
+v
+library(dplyr)
+v<- recode( v, "a" = "one")
+v
 
 ```
 
